@@ -41,12 +41,18 @@ gsettings set org.gnome.desktop.session idle-delay 600
 
 ## Review
 ```
-grep -v "^#\|^$\|^;" /etc/xrdp/xrdp.ini
+grep -v "^#\|^$\|^;" /etc/xrdp/xrdp.ini | grep tcp
 ```
 ```
 sysctl net.core.rmem_max
+```
+```
 sysctl net.core.wmem_max
+```
+```
 sysctl net.ipv4.tcp_rmem
+```
+```
 sysctl net.ipv4.tcp_wmem
 ```
 ## Restart
