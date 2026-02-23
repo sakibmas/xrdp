@@ -10,10 +10,10 @@ apt-get install gnome-core xrdp xauth fonts-beng fonts-indic rxvt-unicode -y
 cp /etc/xrdp/xrdp.ini{,.bak}
 ```
 ```
-sed -i 's/#tcp_send_buffer_bytes=32768/tcp_send_buffer_bytes=4194304/g' /etc/xrdp/xrdp.ini
+sed -i 's/#tcp_send_buffer_bytes=32768/tcp_send_buffer_bytes=0/g' /etc/xrdp/xrdp.ini
 ```
 ```
-sed -i 's/#tcp_recv_buffer_bytes=32768/tcp_recv_buffer_bytes=4194304/g' /etc/xrdp/xrdp.ini
+sed -i 's/#tcp_recv_buffer_bytes=32768/tcp_recv_buffer_bytes=0/g' /etc/xrdp/xrdp.ini
 ```
 ```
 sed -i 's/max_bpp=32/max_bpp=24/g' /etc/xrdp/xrdp.ini
