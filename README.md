@@ -16,6 +16,9 @@ sed -i 's/#tcp_send_buffer_bytes=32768/tcp_send_buffer_bytes=4194304/g' /etc/xrd
 sed -i 's/#tcp_recv_buffer_bytes=32768/tcp_recv_buffer_bytes=4194304/g' /etc/xrdp/xrdp.ini
 ```
 ```
+sed -i 's/max_bpp=32/max_bpp=24/g' /etc/xrdp/xrdp.ini
+```
+```
 usermod -aG ssl-cert xrdp
 ```
 ## Review
