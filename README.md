@@ -105,8 +105,22 @@ systemctl start xrdp xrdp-sesman
 ```
 systemctl status xrdp --no-pager -l
 ```
-
-
+- Authentication Required to Create Managed Color Device
+```
+cat << EOF > /etc/polkit-1/localauthority.conf.d/60-org.freedesktop.color.policy.conf
+polkit.addRule(function(action, subject) {
+   if ((action.id == "org.freedesktop.color-manager.create-device" ||
+     action.id == "org.freedesktop.color-manager.create-profile" ||
+     action.id == "org.freedesktop.color-manager.delete-device" ||
+     action.id == "org.freedesktop.color-manager.delete-profile" ||
+     action.id == "org.freedesktop.color-manager.modify-device" ||
+     action.id == "org.freedesktop.color-manager.modify-profile") &&
+     subject.isInGroup("{users}")) {
+       return polkit.Result.YES;
+    }
+ });
+EOF
+```
 
 
 
