@@ -47,6 +47,15 @@ grep -v "^#\|^$\|^;" /etc/xrdp/xrdp.ini | grep tcp
 gsettings get org.gnome.desktop.interface enable-animations
 ```
 ```
+gsettings get org.gnome.desktop.background picture-uri 
+```
+```
+gsettings get org.gnome.desktop.background picture-uri-dark
+```
+```
+gsettings get org.gnome.desktop.background primary-color
+```
+```
 gsettings list-schemas | grep gnome.desktop
 ```
 ```
