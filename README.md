@@ -39,7 +39,7 @@ gsettings set org.gnome.desktop.background primary-color '#000000'
 gsettings set org.gnome.desktop.session idle-delay 600
 ```
 
-## Review
+### Review
 ```
 grep -v "^#\|^$\|^;" /etc/xrdp/xrdp.ini | grep tcp
 ```
