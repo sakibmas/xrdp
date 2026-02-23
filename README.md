@@ -56,6 +56,9 @@ gsettings get org.gnome.desktop.background picture-uri-dark
 gsettings get org.gnome.desktop.background primary-color
 ```
 ```
+gsettings get org.gnome.desktop.session idle-delay
+```
+```
 gsettings list-schemas | grep gnome.desktop
 ```
 ```
