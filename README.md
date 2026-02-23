@@ -81,5 +81,32 @@ sysctl net.ipv4.tcp_wmem
 ```
 ## Restart
 ```
-sudo systemctl restart xrdp xrdp-sesman
+systemctl restart xrdp xrdp-sesman
 ```
+## Troubleshooting
+```
+touch /var/log/xrdp.log
+```
+```
+chown xrdp:xrdp /var/log/xrdp.log
+```
+```
+systemctl stop xrdp xrdp-sesman
+```
+```
+truncate -s 0 /var/log/xrdp.log
+```
+```
+systemctl start xrdp xrdp-sesman
+```
+```
+systemctl status xrdp --no-pager -l
+```
+```
+journalctl -xeu xrdp --no-pager --since="3 minutes ago"
+```
+
+
+
+
+
