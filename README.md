@@ -43,6 +43,7 @@ gsettings set org.gnome.desktop.session idle-delay 600
 ```
 grep -v "^#\|^$\|^;" /etc/xrdp/xrdp.ini | grep tcp
 ```
+```
 gsettings list-schemas
 ```
 ```
