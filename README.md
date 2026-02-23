@@ -23,4 +23,12 @@ usermod -aG ssl-cert xrdp
 grep -v "^#\|^$\|^;" /etc/xrdp/xrdp.ini
 ```
 ```
+sysctl net.core.rmem_max
+sysctl net.core.wmem_max
+sysctl net.ipv4.tcp_rmem
+sysctl net.ipv4.tcp_wmem
+```
+## Restart
+```
+sudo systemctl restart xrdp xrdp-sesman
 ```
