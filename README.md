@@ -18,7 +18,9 @@ sed -i 's/#tcp_recv_buffer_bytes=32768/tcp_recv_buffer_bytes=4194304/g' /etc/xrd
 ```
 usermod -aG ssl-cert xrdp
 ```
+## Review
 ```
+grep -v "^#\|^$\|^;" /etc/xrdp/xrdp.ini
 ```
 ```
 ```
