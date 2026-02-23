@@ -44,6 +44,9 @@ gsettings set org.gnome.desktop.session idle-delay 600
 grep -v "^#\|^$\|^;" /etc/xrdp/xrdp.ini | grep tcp
 ```
 ```
+gsettings get org.gnome.desktop.interface enable-animations
+```
+```
 gsettings list-schemas | grep gnome.desktop
 ```
 ```
