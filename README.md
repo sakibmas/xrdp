@@ -85,10 +85,13 @@ systemctl restart xrdp xrdp-sesman
 ```
 ## Troubleshooting
 ```
-touch /var/log/xrdp.log
+journalctl -xeu xrdp --no-pager --since="3 minutes ago"
 ```
 ```
-chown xrdp:xrdp /var/log/xrdp.log
+if [ ! -f /var/log/xrdp.log ]; then
+    touch /var/log/xrdp.log
+    chown xrdp:xrdp /var/log/xrdp.log
+fi
 ```
 ```
 systemctl stop xrdp xrdp-sesman
@@ -101,9 +104,6 @@ systemctl start xrdp xrdp-sesman
 ```
 ```
 systemctl status xrdp --no-pager -l
-```
-```
-journalctl -xeu xrdp --no-pager --since="3 minutes ago"
 ```
 
 
