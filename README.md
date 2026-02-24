@@ -15,10 +15,12 @@ usermod -aG ssl-cert xrdp
 ```
 ## Optimize  
 ```
-sed -i 's/#tcp_send_buffer_bytes=32768/tcp_send_buffer_bytes=0/g' /etc/xrdp/xrdp.ini
+CurTcpSendBuffer=$(grep tcp_send_buffer_bytes /etc/xrdp/xrdp.ini)
+sed -i "s/$CurTcpSendBuffer/tcp_send_buffer_bytes=0/g" /etc/xrdp/xrdp.ini                             
 ```
 ```
-sed -i 's/#tcp_recv_buffer_bytes=32768/tcp_recv_buffer_bytes=0/g' /etc/xrdp/xrdp.ini
+CurTcpRecvBuffer=$(grep tcp_recv_buffer_bytes /etc/xrdp/xrdp.ini)
+sed -i "s/$CurTcpRecvBuffer/tcp_send_buffer_bytes=0/g" /etc/xrdp/xrdp.ini         
 ```
 ```
 sed -i 's/max_bpp=32/max_bpp=24/g' /etc/xrdp/xrdp.ini
