@@ -3,7 +3,7 @@
 apt-get update
 ```
 ```
-apt-get install gnome-core xrdp xauth fonts-beng fonts-indic rxvt-unicode -y
+apt-get install gnome-core xrdp xauth fonts-beng -y
 ```
 # Configure
 ```
