@@ -3,7 +3,7 @@
 apt-get update
 ```
 ```
-apt-get install gnome-core xrdp xauth fonts-beng -y
+apt-get install gnome-core xrdp xauth fonts-beng fonts-beng-extra -y
 ```
 # Configure
 ```
