@@ -1,5 +1,5 @@
 ```
-apt-get -y install xrdp openbox x11-xserver-utils python3-xdg menu libsecret-1-0 libvte-2.91-0 thunar tint2 chromium-browser
+apt-get -y install xrdp openbox x11-xserver-utils python3-xdg pipewire libsecret-1-0 libvte-2.91-0 menu thunar tint2 chromium-browser
 ```
 ```
 tee -a /etc/bash.bashrc << 'RCEOF'
