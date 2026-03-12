@@ -19,5 +19,5 @@ echo 'tint2 &' >> ~/.config/openbox/autostart
 DEFAULT_USER=$(ls /home | head -n 1)
 ```
 ```
-chown -R $DEFAULT_USER:$DEFAULT_USER /home/$DEFAULT_USER
+chown -R ${DEFAULT_USER}:${DEFAULT_USER} /home/${DEFAULT_USER}
 ```
