@@ -12,11 +12,13 @@ fi
 RCEOF
 ```
 ```
-mkdir -vp /home/${DEFAULT_USER}/.config/openbox
-echo 'tint2 &' >> /home/${DEFAULT_USER}/.config/openbox/autostart
-```
-```
 DEFAULT_USER=$(ls /home | head -n 1)
+```
+```
+mkdir -vp /home/${DEFAULT_USER}/.config/openbox
+```
+```
+echo 'tint2 &' >> /home/${DEFAULT_USER}/.config/openbox/autostart
 ```
 ```
 chown -R ${DEFAULT_USER}:${DEFAULT_USER} /home/${DEFAULT_USER}
